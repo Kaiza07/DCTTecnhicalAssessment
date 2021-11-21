@@ -24,6 +24,12 @@ const ENDPOINT = 'https://nt-cdn.s3.amazonaws.com/colors.json';
    * Please return a filtered array, or promise from fetch function.
    * Run "npm test" to test your results before making your commit.
    */
+  let data = await res.then(res => res.json()).then(json => json);
+  let filtered = data.filter((item) => {
+   return item.name == {name}.name
+   });
+  return filtered;
+  };
 
   return res;
 };
